@@ -91,27 +91,35 @@ LTE_LOCK_PCI="295"
 ```
 
 ## How to find EARFCN and PCI
+## How to find EARFCN and PCI
 
-When your 5G n78 connection is working well, check the current serving cell and carrier aggregation info using AT commands:
+The easiest way to find the required values is directly in the RutOS web UI:
 
-```sh
-AT+QENG="SERVINGCELL"
+```text
+Status -> Network -> Mobile
 ```
 
-and:
+Check the mobile connection details while your 5G n78 connection is working well. Look for the LTE serving/anchor cell information, especially:
+
+* EARFCN
+* PCI
+
+Use those values in the script:
 
 ```sh
-AT+QCAINFO
+LTE_LOCK_FREQ="<earfcn>"
+LTE_LOCK_PCI="<pci>"
 ```
 
-You can run these commands through `gsmctl`, for example:
+You can also verify the current serving cell and carrier aggregation info with AT commands:
 
 ```sh
 gsmctl -A 'AT+QENG="SERVINGCELL"'
 gsmctl -A 'AT+QCAINFO'
 ```
 
-Look for the LTE anchor cell that is active while n78 is working correctly. Use its EARFCN and PCI in the script.
+The goal is to use the LTE anchor cell that is active while n78 is working correctly.
+
 
 ## Logs
 
