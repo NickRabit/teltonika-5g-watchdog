@@ -67,7 +67,7 @@ Your mobile interface name in RutOS / OpenWrt.
 Example:
 
 ```sh
-MOB_IF="mob1s3a1"
+MOB_IF="mob1s3a1" #Sim1, Sim2, this is eSim (Sim3)
 ```
 
 ### `LTE_LOCK_FREQ`
