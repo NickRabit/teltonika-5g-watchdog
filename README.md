@@ -67,7 +67,7 @@ Your mobile interface name in RutOS / OpenWrt.
 Example:
 
 ```sh
-MOB_IF="mob1s3a1" #Sim1, Sim2, this is eSim (Sim3)
+MOB_IF="mob1s3a1" #Sim1, Sim2, this is for eSim (Sim3)
 ```
 
 ### `LTE_LOCK_FREQ`
@@ -90,7 +90,6 @@ Example:
 LTE_LOCK_PCI="295"
 ```
 
-## How to find EARFCN and PCI
 ## How to find EARFCN and PCI
 
 The easiest way to find the required values is directly in the RutOS web UI:
